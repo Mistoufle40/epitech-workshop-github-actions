@@ -31,7 +31,7 @@ jobs:
       
     - name: Get current date
       id: date
-      run: echo "::set-output name=date::$(date +'%m-%d-%Y %H:%M:%s')"
+      run: echo "::set-output name=date::$(date +'%m-%d-%Y %H:%M:%S')"
         
     - name: Run hello world script
       run: echo Hello World! Today is ${{steps.date.outputs.date}}
