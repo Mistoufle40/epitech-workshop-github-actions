@@ -31,5 +31,8 @@ jobs:
   macos:
     runs-on: macos-latest
     steps:
+      - name: version
+        id: version
+        run: echo "::sw_vers"
       - name: Check MacOS version
-        run: echo sw_vers
+        run: echo ${{steps.version.output.version}}
